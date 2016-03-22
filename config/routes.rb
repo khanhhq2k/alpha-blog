@@ -53,6 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :articles
   root 'pages#home'
   get 'about', to: 'pages#about'
 end
