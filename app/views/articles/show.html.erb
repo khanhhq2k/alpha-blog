@@ -1,7 +1,9 @@
-<h1>Created Article is show here</h1>
+<h1>Article is shown here</h1>
 <p>
   Title:</br><%= @article.title %>
 </p>
 <p>
-  Description:</br><%= @article.title %>
+  Description:</br><%= @article.description %>
 </p>
+<%= link_to "Edit this article", edit_article_path %>
+<%= link_to "Article list", articles_path %>

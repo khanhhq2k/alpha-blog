@@ -55,5 +55,5 @@ Rails.application.routes.draw do
   #   end
   resources :articles
   root 'pages#home'
-  get 'about', to: 'pages#about'
+  get '/about', to: 'pages#about'
 end
