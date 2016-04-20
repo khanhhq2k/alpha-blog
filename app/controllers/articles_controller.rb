@@ -54,7 +54,10 @@ class ArticlesController < ApplicationController
     end
     
     def require_same_user
-      if current_user != @article.user
+      #if the user is not owner of article AND not an admin as well, it
+      #will be redirect, if the user is not owner but is an admin, the statement
+      #is wrong so it can ignore the below check and have full access
+      if current_user != @article.user && !current_user.admin?
         flash[:danger] = "You can only change your own articles!"
         redirect_to articles_path
       end
