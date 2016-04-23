@@ -54,6 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   resources :articles
+  resources :categories
   resources :users, except: [:new]
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
