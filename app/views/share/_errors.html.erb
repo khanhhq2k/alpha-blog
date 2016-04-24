@@ -7,6 +7,8 @@
             <%= pluralize(obj.errors.count, "error") %>
             <% if @user %>
               prevented user from being saved:
+            <% elsif @category%>
+              prevented category from being saved:
             <% else %>
               prevented article from being saved:
             <% end %>
